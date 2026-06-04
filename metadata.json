@@ -1,6 +1,6 @@
 {
-  "name": "Titan Fitness",
-  "description": "Modern, premium dark-themed fitness website featuring elite training, services, membership plans, and success stories.",
+  "name": "TechNova",
+  "description": "Modern showcase website for TechNova, a leading-edge technology solutions provider.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

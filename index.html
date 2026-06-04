@@ -1,13 +1,425 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova | Intelligent Digital Solutions</title>
+  <!-- Google Fonts for Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Link external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Dynamic Header / Sticky Nav -->
+  <header id="main-header" class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link" id="nav-logo">
+        <span class="logo-icon-wrapper">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        <span class="logo-text">Tech<span class="gradient-text">Nova</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" id="desktop-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+          <li><a href="#services" class="nav-link" id="link-services">Services</a></li>
+          <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm" id="btn-nav-cta">Get Started</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay Nav -->
+    <div class="mobile-overlay" id="mobile-menu-overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link" id="mob-link-home">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link" id="mob-link-about">About</a></li>
+          <li><a href="#services" class="mobile-nav-link" id="mob-link-services">Services</a></li>
+          <li><a href="#contact" class="mobile-nav-link" id="mob-link-contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" id="mob-btn-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <!-- Glow Gradients -->
+      <div class="glow-orb orb-primary" id="orb-1"></div>
+      <div class="glow-orb orb-secondary" id="orb-2"></div>
+
+      <div class="container hero-container grid-2">
+        <div class="hero-content fade-in-up">
+          <div class="pill" id="hero-tag">
+            <span class="pill-dot"></span>
+            <span>Unlocking Intelligent Systems</span>
+          </div>
+          <h1 id="hero-heading" class="hero-title">
+            Engineering the <span class="gradient-text">Digital Frontier</span> for Next-Gen Enterprises
+          </h1>
+          <p id="hero-desc" class="hero-description">
+            We design, build, and deploy customized SaaS platforms, resilient cloud architectures, and machine-learning models to catalyze your digital evolution.
+          </p>
+          <div class="hero-actions" id="hero-buttons">
+            <a href="#services" class="btn btn-primary" id="btn-hero-primary">Explore Services</a>
+            <a href="#about" class="btn btn-outline" id="btn-hero-secondary">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in-up">
+          <!-- Multi-ring abstract dashboard art built purely via SVG/CSS -->
+          <div class="interactive-canvas-mock">
+            <div class="canvas-panel-header">
+              <span class="panel-dot red"></span>
+              <span class="panel-dot yellow"></span>
+              <span class="panel-dot green"></span>
+              <span class="panel-title font-mono">system_dashboard.sh</span>
+            </div>
+            <div class="canvas-panel-body">
+              <div class="terminal-row code-accent">
+                <span class="terminal-prompt">&gt;</span> <span class="font-mono">technova --init-deploy</span>
+              </div>
+              <div class="terminal-row success-text font-mono">
+                [SUCCESS] Modules loaded: Cognitive, CloudMesh, ZeroSafe
+              </div>
+              
+              <!-- SVG Tech Core Graphic -->
+              <div class="svg-graphic-wrapper">
+                <svg viewBox="0 0 200 200" class="rotating-mesh">
+                  <defs>
+                    <linearGradient id="bluePurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#3B82F6" />
+                      <stop offset="100%" stop-color="#A855F7" />
+                    </linearGradient>
+                  </defs>
+                  
+                  <!-- Pulsing Circles -->
+                  <circle cx="100" cy="100" r="80" stroke="url(#bluePurple)" stroke-width="0.5" stroke-dasharray="4, 12" fill="none" />
+                  <circle cx="100" cy="100" r="50" stroke="url(#bluePurple)" stroke-width="1" stroke-dasharray="1, 8" fill="none" class="pulse-ring" />
+                  <circle cx="100" cy="100" r="25" stroke="url(#bluePurple)" stroke-width="1.5" fill="none" class="pulse-ring-fast" />
+                  
+                  <!-- Connections & Nodes -->
+                  <g class="nodes">
+                    <!-- Central Node -->
+                    <circle cx="100" cy="100" r="8" fill="url(#bluePurple)" />
+                    <!-- Orbital Nodes -->
+                    <circle cx="50" cy="60" r="5" fill="#3B82F6" class="floating-node-1" />
+                    <circle cx="150" cy="70" r="6" fill="#A855F7" class="floating-node-2" />
+                    <circle cx="130" cy="140" r="5" fill="#10B981" class="floating-node-3" />
+                    <circle cx="60" cy="130" r="4" fill="#3B82F6" class="floating-node-4" />
+                    
+                    <!-- SVG Link Lines -->
+                    <line x1="100" y1="100" x2="50" y2="60" stroke="#3B82F6" stroke-width="1" opacity="0.6" />
+                    <line x1="100" y1="100" x2="150" y2="70" stroke="#A855F7" stroke-width="1" opacity="0.6" />
+                    <line x1="100" y1="100" x2="130" y2="140" stroke="#10B981" stroke-width="1" opacity="0.6" />
+                    <line x1="100" y1="100" x2="60" y2="130" stroke="#3B82F6" stroke-width="1" opacity="0.6" />
+                    <line x1="50" y1="60" x2="60" y2="130" stroke="#3B82F6" stroke-dasharray="2, 4" stroke-width="1" opacity="0.4" />
+                    <line x1="150" y1="70" x2="130" y2="140" stroke="#A855F7" stroke-dasharray="2, 4" stroke-width="1" opacity="0.4" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Metrics inside hero visual -->
+              <div class="terminal-stats grid-3 font-mono">
+                <div class="stat-pill">
+                  <span class="stat-label">AI RES</span>
+                  <span class="stat-val text-indigo">Active</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-label">LATENCY</span>
+                  <span class="stat-val text-emerald">12ms</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-label">UPLOADS</span>
+                  <span class="stat-val text-amber">100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scrolling-reveal" id="sec-about">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="badge" id="about-badge">Who We Are</span>
+        </div>
+        <div class="grid-2 about-content-grid">
+          <!-- Text column -->
+          <div class="about-text-column" id="about-intro-text">
+            <h2 class="section-title">Architecting robust architectures that <span class="gradient-text">scale flawlessly</span>.</h2>
+            <p class="section-subtitle">
+              At TechNova, we bridge pure science and commercial scale. Founded by engineers, we provide clean code, responsive system patterns, and optimized execution pipelines.
+            </p>
+            <p class="section-description">
+              We look past temporary trends. Every service we launch, every cloud environment we configure, and every model we optimize centers on longevity, clear audit trails, and strict memory safety.
+            </p>
+          </div>
+
+          <!-- Counter grid -->
+          <div class="about-stats-grid" id="about-counters-grid">
+            <div class="stat-card" id="about-stat-1">
+              <h3 class="stat-number gradient-text" data-target="99.9">0%</h3>
+              <p class="stat-title">Guaranteed SLA Uptime</p>
+              <p class="stat-desc">Ultra-redundant distributed node groups.</p>
+            </div>
+            <div class="stat-card" id="about-stat-2">
+              <h3 class="stat-number gradient-text" data-target="15">0M</h3>
+              <p class="stat-title">Secure API Calls / Day</p>
+              <p class="stat-desc">Sub-millisecond processing pipelines.</p>
+            </div>
+            <div class="stat-card" id="about-stat-3">
+              <h3 class="stat-number gradient-text" data-target="250">0+</h3>
+              <p class="stat-title">Enterprises Empowered</p>
+              <p class="stat-desc">Consulting to operational production.</p>
+            </div>
+            <div class="stat-card" id="about-stat-4">
+              <h3 class="stat-number gradient-text" data-target="24">0/7</h3>
+              <p class="stat-title">Proactive Monitoring</p>
+              <p class="stat-desc">Autonomous failover event detection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section scrolling-reveal" id="sec-services">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="badge" id="services-badge">Our System Capacities</span>
+        </div>
+        <h2 class="section-title text-center" id="services-heading">Precision Modules</h2>
+        <p class="section-subtitle text-center mx-auto" id="services-desc" style="max-width: 650px;">
+          Select ready-made enterprise modules to augment your current development stack, styled to perfection and engineered to excel.
+        </p>
+
+        <div class="services-grid grid-3" id="services-cards-wrapper">
+          <!-- Card 1: Cognitive Engine -->
+          <div class="service-card" id="service-node-1">
+            <div class="service-decoration-line"></div>
+            <div class="service-icon-bg">
+              <svg class="service-icon text-indigo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 0 1 7.54 16.59c-.24.25-.38.58-.38.93V20a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-.48c0-.35-.14-.68-.38-.93A10 10 0 0 1 12 2z"></path>
+                <path d="M9 10h6"></path>
+                <path d="M10 14h4"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Cognitive Systems</h3>
+            <p class="service-card-desc">
+              Harness predictive machine-learning engines and customized neural network models specialized in unstructured document analysis and autonomous routing.
+            </p>
+            <ul class="service-features font-mono">
+              <li><span class="feat-dot"></span> LLM Adapter Customization</li>
+              <li><span class="feat-dot"></span> Pattern Match Audits</li>
+              <li><span class="feat-dot"></span> Spark Pipelines</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Cloud Mesh -->
+          <div class="service-card" id="service-node-2">
+            <div class="service-decoration-line"></div>
+            <div class="service-icon-bg">
+              <svg class="service-icon text-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                <line x1="20" y1="6" x2="20.01" y2="6"></line>
+                <line x1="20" y1="18" x2="20.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-card-title">CloudMesh Deploy</h3>
+            <p class="service-card-desc">
+              Achieve massive horizontal scale. We design robust multi-region infrastructure setups with self-healing containers, instant failovers, and low-latency databases.
+            </p>
+            <ul class="service-features font-mono">
+              <li><span class="feat-dot"></span> Kubernetes Operations</li>
+              <li><span class="feat-dot"></span> Edge CDN Ingress</li>
+              <li><span class="feat-dot"></span> Global State Sync</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Zero-Trust Security -->
+          <div class="service-card" id="service-node-3">
+            <div class="service-decoration-line"></div>
+            <div class="service-icon-bg">
+              <svg class="service-icon text-purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Zero-Trust Auditing</h3>
+            <p class="service-card-desc">
+              Protect high-volume transactions against emerging attack vectors. Implement cryptographically sound multi-tenant systems with automated vulnerability logs.
+            </p>
+            <ul class="service-features font-mono">
+              <li><span class="feat-dot"></span> AES-GCM Encrypted States</li>
+              <li><span class="feat-dot"></span> IAM Principle Isolation</li>
+              <li><span class="feat-dot"></span> Realtime Attack Telemetry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact-section scrolling-reveal" id="sec-contact">
+      <div class="container container-narrow">
+        <div class="contact-box" id="contact-wrapper">
+          <div class="section-badge-center">
+            <span class="badge" id="contact-badge">Initiate Project</span>
+          </div>
+          <h2 class="section-title text-center" id="contact-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle text-center mx-auto" id="contact-desc" style="max-width: 500px; margin-bottom: 2.5rem;">
+            Fill out the request container details below. Our technical architect will review and establish a connection within 24 hours.
+          </p>
+
+          <form id="tech-contact-form" class="tech-form">
+            <div class="form-grid">
+              <div class="form-group" id="form-group-name">
+                <label for="usr-name" class="form-label">Corporate Signature / Name *</label>
+                <input type="text" id="usr-name" name="name" class="form-input" placeholder="e.g. Liam Vance" required>
+              </div>
+              <div class="form-group" id="form-group-email">
+                <label for="usr-email" class="form-label">Digital Coordinate / Email *</label>
+                <input type="email" id="usr-email" name="email" class="form-input" placeholder="e.g. liam@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-group" id="form-group-subject">
+              <label for="usr-subject" class="form-label">Subject Domain *</label>
+              <input type="text" id="usr-subject" name="subject" class="form-input" placeholder="e.g. Multi-Cloud Mesh Query" required>
+            </div>
+
+            <div class="form-group" id="form-group-message">
+              <label for="usr-msg" class="form-label">Design Goals & Message *</label>
+              <textarea id="usr-msg" name="message" class="form-input form-textarea" placeholder="Outline your technical parameters and desired targets..." required></textarea>
+            </div>
+
+            <!-- Custom Form Alerts -->
+            <div class="form-alert success" id="submit-success-alert">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Transmission Successful! Our systems have registered your digital signature.</span>
+            </div>
+
+            <div class="form-alert error" id="submit-error-alert">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Failed to establish packet connection. Please verify your inputs.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+              <span class="btn-text">Transmit Request</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="main-footer">
+    <div class="container footer-grid grid-4">
+      <div class="footer-brand" id="footer-brand-column">
+        <a href="#home" class="logo-link mb-4">
+          <span class="logo-icon-wrapper">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </span>
+          <span class="logo-text">Tech<span class="gradient-text">Nova</span></span>
+        </a>
+        <p class="footer-desc">
+          Building resilient enterprise digital architecture. Unifying cloud nodes, optimized cognitive engines, and bulletproof auditing models.
+        </p>
+      </div>
+
+      <div class="footer-links-col" id="footer-nav-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home Base</a></li>
+          <li><a href="#about">Our Identity</a></li>
+          <li><a href="#services">Architecture Modules</a></li>
+          <li><a href="#contact">Initiate Connection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col" id="footer-services-column">
+        <h4 class="footer-title">Capabilities</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Cognitive Systems</a></li>
+          <li><a href="#services">CloudMesh Infrastructure</a></li>
+          <li><a href="#services">Zero-Trust Strategy</a></li>
+          <li><a href="#services">Quantum-Safe Guarding</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col" id="footer-contact-column">
+        <h4 class="footer-title">Coordinates</h4>
+        <p class="footer-text font-mono text-sm mb-2">info@technova-sys.io</p>
+        <p class="footer-text text-sm mb-4">Global Remote Ingress Nodes</p>
+        <div class="social-row">
+          <a href="#" class="social-circle" aria-label="Github connection">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="LinkedIn correlation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="X network link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text font-mono">&copy; 2026 TechNova Systems. All rights registered globally.</p>
+        <p class="copyright-security text-indigo text-xs font-mono">SYSTEM READY // 0 ERRORS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link external dynamic JS script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
